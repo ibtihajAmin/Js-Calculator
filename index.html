@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+    <title>Calculator</title>
+</head>
+
+<body>
+    <div class="container mt-4 mr-4">
+        <div class="wrapping">
+            <form name="form" class="">
+                <input class="textview" name="textview">
+            </form>
+            <table>
+                <tr>
+                    <td><input type="button" class="btn btn-secondary calBtn" value="C" onclick="allClear()"></td>
+                    <td><input type="button" class="btn btn-secondary calBtn" value="<" onclick="removeOneDigit()"></td>
+                    <td><input type="button" class="btn btn-secondary calBtn" value="/" onclick="insert('/')"></td>
+                    <td><input type="button" class="btn btn-secondary calBtn" value="*" onclick="insert('*')"></td>
+                </tr>
+
+                <tr>
+                    <td><input type="button" class="btn btn-secondary calBtn" value="7" onclick="insert(7)"></td>
+                    <td><input type="button" class="btn btn-secondary calBtn" value="8" onclick="insert(8)"></td>
+                    <td><input type="button" class="btn btn-secondary calBtn" value="9" onclick="insert(9)"></td>
+                    <td><input type="button" class="btn btn-secondary calBtn" value="-" onclick="insert('-')"></td>
+                </tr>
+
+                <tr>
+                    <td><input type="button" class="btn btn-secondary calBtn" value="4" onclick="insert(4)"></td>
+                    <td><input type="button" class="btn btn-secondary calBtn" value="5" onclick="insert(5)"></td>
+                    <td><input type="button" class="btn btn-secondary calBtn" value="6" onclick="insert(6)"></td>
+                    <td><input type="button" class="btn btn-secondary calBtn" value="+" onclick="insert('+')"></td>
+                </tr>
+
+                <tr>
+                    <td><input type="button" class="btn btn-secondary calBtn" value="1" onclick="insert(1)"></td>
+                    <td><input type="button" class="btn btn-secondary calBtn" value="2" onclick="insert(2)"></td>
+                    <td><input type="button" class="btn btn-secondary calBtn" value="3" onclick="insert(3)"></td>
+                    <td rowspan="5"><input type="button" style="height:107px" class="btn btn-secondary calBtn" value="="
+                            onclick="equal()"></td>
+                </tr>
+
+                <tr>
+                    <td colspan="2"><input style="width: 106px;" type="button" class="btn btn-secondary calBtn"
+                            value="0" onclick="insert(0)"></td>
+                    <td><input type="button" class="btn btn-secondary calBtn" value="." onclick="insert('.')"></td>
+
+                </tr>
+
+            </table>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>
